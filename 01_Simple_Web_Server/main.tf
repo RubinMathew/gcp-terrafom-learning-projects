@@ -1,7 +1,7 @@
 # Configure the Google Cloud provider- for projetc my-first-project using default-compute-service-account
 # This is a terraform configuration file for creating s simple webserver with apache in gcp
 provider "google" {
-  project     = "<your project id>"  #your project id in string
+  project     = "<your project id>"  #replace it with your project id
   region      = "us-central1"
   zone ="us-central1-a"
   # credentials = file("<path-to-key-file>.json") or provide your key as environment variable with name GOOGLE_APPLICATION_CREDENTIALS
