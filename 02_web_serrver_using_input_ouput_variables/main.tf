@@ -1,4 +1,4 @@
-# Configure the Google Cloud provider- for projetc my-first-project
+# Configure the Google Cloud provider- for project my-first-project
 # This is a terraform configuration file for creating s simple webserver in  apache in gcp
 provider "google" {
   project     = var.project
