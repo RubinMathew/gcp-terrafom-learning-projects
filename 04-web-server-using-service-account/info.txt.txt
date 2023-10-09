@@ -1,0 +1,4 @@
+This project is used to create a webserver in gcp.
+Create a service account in your project with required roles and permissions based on your project requirements. 
+generate a key and download your private key 🗝use this key for building your gcp resourses using terraform.
+specify this service account name  in your service_account block of google_compute_instance resources
