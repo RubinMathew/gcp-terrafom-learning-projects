@@ -1,0 +1,4 @@
+# This is a terraform configuration file for creating s simple webserver-mig with apache in gcp
+ # you cannot install apache2 using start up script if your vm instant does not have external ip address. 
+In  this project, if you create MIG without acces config (ip) your apache won't be installed and your load balaner will fail
+you load balancer will fail
