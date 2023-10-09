@@ -1,4 +1,4 @@
-# Configure the Google Cloud provider- for projetc my-first-project using default-compute-service-account
+# Configure the Google Cloud provider- for project my-first-project using default-compute-service-account
 # This is a terraform configuration file for creating s simple webserver with apache in gcp
 provider "google" {
   project     = "<your project id>"  #replace it with your project id
