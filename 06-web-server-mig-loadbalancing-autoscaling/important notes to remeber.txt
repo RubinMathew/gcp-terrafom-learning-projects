@@ -1,0 +1,11 @@
+# you cannot install apache2 using start up script if your vm instance does not have external ip address.
+# if you create MIG without acces config (ip) your appache wont be installed and your load balaner will be failed
+
+To check whether your autoscaler works or not you need to do follwoing things 
+
+for generating cpu usage 
+ssh into one of the vm and
+> sudo apt-get install -y stress-ng               # For Debian/Ubuntu
+> stress-ng --cpu 1 --timeout 300s            this will generate stress for 300 sec
+
+now you can see that another MIG instances will be generated automattically and your services won't be stopped.load balancer will redirect traffic to your new instances.
