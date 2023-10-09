@@ -1,0 +1,10 @@
+Web server 
+This terraform projects create a webserver on gcp using default-compute-service-account.
+
+    1. provider.tf  : used to specify your project, default region, zone and servioce account key to authenticate
+    2. network-subnet.tf : specify your vpc networks
+    3. ariables.tf :  specify your input variables that can be used in other terraform files for referencing a value
+    4. terraform.tfvars :  here you can sepcify the default value of your vairable specified as null in variables.tf (check variables :  project)
+    5. firewall-vpc-public.tf :  firewall rule for your vpc and subnets
+    6. outputs.tf : output variables of your webserver projects, you will get the output when you hit terraform apply
+    7. compute-instance-spec.tf : define your compute instances 
