@@ -1,0 +1,63 @@
+Basic kubernets commands
+
+kubectl create deployment nginx-deployment --image=nginx:latest    #this will create a nginx deployment on default namespace
+kubectl expose deployment nginx-deployment --port=80 --type=LoadBalancer --name=nginx-service        #this will create a service named nginx-service of loadbalancer type
+kubectl scale deployment nginx-deployment --replicas=5     #it will create 5 pods(replicas) in the deployments 
+kubectl autoscale deployment nginx-deployment --cpu-percent=50 --min=2 --max=5    #This will create  HorizonalPodAutoscaler 
+
+
+
+
+Here are some basic kubectl commands that you can use to interact with your Kubernetes cluster:
+
+kubectl get: List resources in your cluster.
+
+kubectl get pods: List all pods in the current namespace.
+kubectl get deployments: List all deployments in the current namespace.
+kubectl get services: List all services in the current namespace.
+
+kubectl describe: View detailed information about a resource.
+
+kubectl describe pod <pod-name>: Display detailed information about a specific pod.
+kubectl describe deployment <deployment-name>: Display detailed information about a specific deployment.
+kubectl describe service <service-name>: Display detailed information about a specific service.
+
+kubectl create: Create resources from a YAML or JSON file.
+
+kubectl create -f <filename.yaml>: Create a resource defined in a YAML file.
+Example: kubectl create -f my-pod.yaml to create a pod from my-pod.yaml.
+
+kubectl apply: Apply changes to existing resources or create new resources from a YAML or JSON file.
+
+kubectl apply -f <filename.yaml>: Apply changes or create resources defined in a YAML file.
+Example: kubectl apply -f my-deployment.yaml to create or update a deployment from my-deployment.yaml.
+
+kubectl delete: Delete resources.
+
+kubectl delete pod <pod-name>: Delete a specific pod.
+kubectl delete deployment <deployment-name>: Delete a specific deployment.
+kubectl delete service <service-name>: Delete a specific service.
+
+kubectl logs: View container logs.
+
+kubectl logs <pod-name>: Display the logs for a specific pod.
+
+kubectl exec: Execute commands in a running container.
+
+kubectl exec -it <pod-name> -- <command>: Run a command in a specific pod interactively.
+Example: kubectl exec -it my-pod -- /bin/bash to open a shell in the my-pod container.
+
+kubectl port-forward: Forward ports from a local machine to a pod.
+
+kubectl port-forward <pod-name> <local-port>:<pod-port>: Forward local traffic to a specific port on a pod.
+Example: kubectl port-forward my-pod 8080:80 to forward local port 8080 to the pod's port 80.
+
+kubectl get nodes: List all nodes in the cluster.
+
+kubectl get namespaces: List all namespaces in the cluster.
+
+kubectl config: Manage kubeconfig settings.
+
+kubectl config get-contexts: List available contexts.
+kubectl config use-context <context-name>: Set the current context.
+These are some of the most commonly used kubectl commands. You can get more information and options for each command by running kubectl <command> --help.
