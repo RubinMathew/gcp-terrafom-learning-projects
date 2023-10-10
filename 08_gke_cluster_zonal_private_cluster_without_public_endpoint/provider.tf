@@ -1,5 +1,5 @@
 # Configure the Google Cloud provider- for projetc my-first-project using default-compute-service-account
-# This is a terraform configuration file for creating s simple webserver-mig with apache in gcp
+
 provider "google" {
   project     = "<project_id>" #specify your gcp project id here
   region      = "us-central1"
