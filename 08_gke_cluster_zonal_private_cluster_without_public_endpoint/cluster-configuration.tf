@@ -1,4 +1,5 @@
 #configure your gke cluster here
+
 resource "google_container_cluster" "gke-private-cluster" {
   name               = "gke-private-cluster"
   network            = google_compute_network.vpc-public.name
